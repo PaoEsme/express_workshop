@@ -2,6 +2,7 @@ const morgan = require('morgan');
 const express = require('express');
 const app = express();
 const pokemon = require('./routes/pokemon');
+const user = require('./routes/user');
 
 /*"morgan" (en este caso nos ayuda a acotar de dónde viene el error) )es una dependencia de desarrollo, 
 no se utiliza cuando el servidor esta en desarrollo porque debería dar más información de la necesaria.*/
@@ -25,6 +26,7 @@ app.get("/", (req, res, next) => {
 });
 
 app.use("/pokemon", pokemon);
+app.use("/user", user);
 
 app.use((req, res, next) => {
     return res.status(404).json({code: 404, message: "URL no encontrada"});
