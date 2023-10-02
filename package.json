@@ -4,12 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaoEsme/express_workshop.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "jwt",
+    "mysql"
+  ],
+  "author": "Paola Velasco",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaoEsme/express_workshop/issues"
+  },
+  "homepage": "https://github.com/PaoEsme/express_workshop#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.0.1"
   }
 }
