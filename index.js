@@ -9,7 +9,9 @@ const user = require('./routes/user');
 const auth = require('./config/middleware/auth');
 const notFound = require('./config/middleware/notFound');
 const index = require('./config/middleware/index');
+const cors = require('./config/middleware/cors');
 
+app.use(cors);
 /*"morgan" (en este caso nos ayuda a acotar de dónde viene el error) )es una dependencia de desarrollo, 
 no se utiliza cuando el servidor esta en desarrollo porque debería dar más información de la necesaria.*/
 app.use(morgan('dev'));
