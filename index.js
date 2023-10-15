@@ -6,9 +6,14 @@ const app = express();
 const pokemon = require('./routes/pokemon');
 const user = require('./routes/user');
 //Middleware
+//se encargan de procesar peticiones que entren
+//Middleware para checar autenticación
 const auth = require('./config/middleware/auth');
+//Middleware para procesar páginas que no existen 
 const notFound = require('./config/middleware/notFound');
+//Middleware para otras tipo de cosas
 const index = require('./config/middleware/index');
+//Middleware para checar permisos del servidor 
 const cors = require('./config/middleware/cors');
 
 app.use(cors);
